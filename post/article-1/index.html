@@ -3,15 +3,21 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Gridea | Estoi</title>
+<title>前端词典】提高幸福感的 9 个 CSS 技巧 | Estoi</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://estoi.github.io/favicon.ico?v=1557049125701">
+<link rel="shortcut icon" href="https://estoi.github.io/favicon.ico?v=1557049486252">
 <link rel="stylesheet" href="https://estoi.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -29,7 +35,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://estoi.github.io">
-        <img src="https://estoi.github.io/images/avatar.png?v=1557049125701" class="site-logo">
+        <img src="https://estoi.github.io/images/avatar.png?v=1557049486252" class="site-logo">
         <h1 class="site-title">Estoi</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -90,35 +96,26 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: Gridea</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://estoi.github.io/post/hello-gridea">
-                  <h2 class="post-title">Hello Gridea</h2>
-                </a>
-                <div class="post-date">
-                  2018-12-12
-                </div>
-                <div class="post-abstract">
-                  <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+          <div class="post-detail">
+            <h2 class="post-title">前端词典】提高幸福感的 9 个 CSS 技巧</h2>
+            <div class="post-date">2019-05-05</div>
+            
+            <div class="post-content">
+              <p><a href="https://juejin.im/post/5cb45a06f265da03474df54e?utm_source=gold_browser_extension">掘金</a></p>
 
-                </div>
-              </div>
-              
-                <a class="right" href="https://estoi.github.io/post/hello-gridea">
-                  <div class="feature-container" style="background-image: url('https://estoi.github.io/post-images/hello-gridea.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
+            </div>
+            
+            
 
-          <div class="pagination-container">
-  
-  
-</div>
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
 
         </div>
       </div>
@@ -140,6 +137,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'e0a153b8287a7a4b4436',
+        clientSecret: '6e7787d2cfa2cfb5a0b08fb4500872b2843a1fe7',
+        repo: 'estoi.github.io',
+        owner: 'estoi',
+        admin: ['estoi'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
